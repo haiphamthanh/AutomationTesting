@@ -31,7 +31,7 @@ class Converter {
     var result = ""
     var localNumber = number
     
-    if localNumber >= 10 {
+    while localNumber >= 10 {
       result += "X"
       localNumber = localNumber - 10
     }
