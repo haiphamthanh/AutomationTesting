@@ -100,12 +100,8 @@ private extension Game {
   }
   
   func generateAnswers(_ index: Int, number: Int) -> String {
-    // TODO: (Final project) Uncomment line below and comment out following line
-    // to use the converter
-    //    let correctAnswer = converter.convert(number)
-    // TODO: (Starter project) Uncomment line below and comment out the previous
-    // line
-    let correctAnswer = "ABCD"
+    let correctAnswer = converter.convert(number)
+    
     if showWrongConversion() {
       isCorrectConversion.append(false)
       return correctAnswer.garbled()
