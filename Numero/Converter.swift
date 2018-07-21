@@ -36,22 +36,26 @@ class Converter {
       localNumber = localNumber - 10
     }
     
-    if localNumber >= 9 {
+    while localNumber >= 9 {
       result += "IX"
       localNumber = localNumber - 9
     }
     
-    if localNumber >= 5 {
+    while localNumber >= 5 {
       result += "V"
       localNumber = localNumber - 5
     }
     
-    if localNumber >= 4 {
+    while localNumber >= 4 {
       result += "IV"
       localNumber = localNumber - 4
     }
     
-    result += String(repeating: "I", count: localNumber)
+    while localNumber >= 1 {
+      result += "I"
+      localNumber = localNumber - 1
+    }
+    
     return result
   }
 }
